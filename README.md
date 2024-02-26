@@ -11,7 +11,7 @@
 #### Member in team ####
 
 - Patthaveekarn Khaekai 630612103
-- 
+- Khachen Chaiyo 630612177
 
 Application Use 
 - Figma

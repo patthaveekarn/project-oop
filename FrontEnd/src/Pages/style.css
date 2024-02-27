@@ -6,11 +6,13 @@
   gap: 2.5vmin;
 }
 
-.shadow-button-set > li {
+.shadow-button-set >li {
   display: inline-flex;
   background: black;
   border-radius: 10px;
 }
+
+
 
 .shadow-button-set > li:is(:hover, :focus-within) > button:not(:active) {
   --distance: -10px;
@@ -81,4 +83,6 @@ body.home {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+ 
 

@@ -1,23 +1,22 @@
 import React from "react";
 import "./style.css";
 import HTP from "./HTP";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route,useNavigate } from "react-router-dom";
 import NG from "./newGame";
 
 const MenuGame = () => {
+  const navigate = useNavigate();
   return (
     <div className="menu">
       <ul className="shadow-button-set">
         <li>
-          <Link to="/newGame">New Game</Link>
+          <button onClick={() => navigate("/newGame")}>New Game</button>
         </li>
-
         <li>
-          <Link to="/howToPlay">How to Play</Link>
+          <button onClick={() => navigate("/howToPlay")}>How To Play</button>    
         </li>
-
         <li>
-          <button id="quit">Quit</button>
+          <button>Quit</button>
         </li>
       </ul>
     </div>

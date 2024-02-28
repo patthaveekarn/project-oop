@@ -3,17 +3,23 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Menu from "./Pages/menu";
 import HTP from "./Pages/HTP";
 import NG from "./Pages/newGame";
+import About from "./Pages/About";
 import "./App.css";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   return (
-    <div className="square twitter">
+    <div className="square homE">
       <span></span>
       <span></span>
       <span></span>
       <div className="content">
         <h1>UPBEAT</h1>
-        <a href="/menu">MENU</a>
+        <a href="/menu">
+          <FontAwesomeIcon icon={faBars} />
+        </a>
       </div>
     </div>
   );
@@ -28,6 +34,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/newGame" element={<NG />} />
           <Route path="/howToPlay" element={<HTP />} />
+          <Route path="/about" element={<About />} />
 
           {/* เพิ่มเส้นทางอื่นๆ ตามต้องการ */}
         </Routes>

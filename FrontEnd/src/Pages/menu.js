@@ -1,15 +1,13 @@
 import React from "react";
 import "./style.css";
-import HTP from "./HTP";
 import { Routes, Route } from "react-router-dom";
-import NG from "./newGame";
-import About from "./About";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
-import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
-
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import QuitButton from "./QuitButton";
+import HTP from "./HTP";
+import NG from "./newGame";
 const MenuGame = () => {
   return (
     <body>
@@ -42,9 +40,9 @@ const MenuGame = () => {
         <span></span>
         <span></span>
         <div className="content">
-          <h1>INFO </h1>
-          <a href="/about">
-            <FontAwesomeIcon icon={faAddressCard} />
+          <h1>QUIT </h1>
+          <a href="/quitButton">
+            <FontAwesomeIcon icon={faRightFromBracket} />
           </a>
         </div>
       </div>
@@ -59,7 +57,7 @@ function Menu() {
         <Route path="/" element={<MenuGame />} />
         <Route path="/newGame" element={<NG />} />
         <Route path="/howToPlay" element={<HTP />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/quitButton" element={<QuitButton />} />
       </Routes>
     </div>
   );

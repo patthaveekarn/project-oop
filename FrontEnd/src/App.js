@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Menu from "./Pages/menu";
 import HTP from "./Pages/HTP";
 import NG from "./Pages/newGame";
-import About from "./Pages/About";
+import QuitButton from "./Pages/QuitButton";
 import "./App.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,6 +19,8 @@ const Home = () => {
         <h1>UPBEAT</h1>
         <a href="/menu">
           <FontAwesomeIcon icon={faBars} />
+          
+          
         </a>
       </div>
     </div>
@@ -34,9 +36,8 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/newGame" element={<NG />} />
           <Route path="/howToPlay" element={<HTP />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/quitButton" element={<QuitButton />} />
 
-          {/* เพิ่มเส้นทางอื่นๆ ตามต้องการ */}
         </Routes>
       </div>
     </Router>

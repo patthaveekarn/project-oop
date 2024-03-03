@@ -15,25 +15,28 @@ body {
   background: #f1f1f1;
 }
 
-.square {
+.squareBT {
   position: relative;
   margin: 0 10px;
-  width: 400px;
-  height: 400px;
+  width: 200px; /* ลดขนาดเป็น 200px */
+  height: 200px; /* ลดขนาดเป็น 200px */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.square span:nth-child(1) {
+.squareBT span {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: 2px solid black;
-  border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
   transition: 0.5s;
+}
+
+.squareBT span:nth-child(1) {
+  border-radius: 25% 45% 50% 25% / 50% 30% 70% 40%; /* ปรับค่าของ border-radius */
   animation: animate 6s linear infinite;
 }
 
@@ -47,20 +50,13 @@ body {
   background: #84cdfa;
 }
 
-.C:hover span:nth-child(1) {
+.Z:hover span:nth-child(1) {
   border: none;
-  background: #5ad1cd;
+  background: #08e23b;
 }
 
-.square span:nth-child(2) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid black;
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  transition: 0.5s;
+.squareBT span:nth-child(2) {
+  border-radius: 30% 50% 50% 30% / 40% 40% 60% 60%; /* ปรับค่าของ border-radius */
   animation: animate 4s linear infinite;
 }
 
@@ -74,20 +70,13 @@ body {
   background: #84cdfa;
 }
 
-.C:hover span:nth-child(2) {
+.Z:hover span:nth-child(2) {
   border: none;
-  background: #5ad1cd;
+  background: #08e23b;
 }
 
-.square span:nth-child(3) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid black;
-  border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
-  transition: 0.5s;
+.squareBT span:nth-child(3) {
+  border-radius: 20% 35% 60% 30% / 30% 40% 60% 70%; /* ปรับค่าของ border-radius */
   animation: animate2 10s linear infinite;
 }
 
@@ -101,9 +90,9 @@ body {
   background: #84cdfa;
 }
 
-.C:hover span:nth-child(3) {
+.Z:hover span:nth-child(3) {
   border: none;
-  background: #5ad1cd;
+  background: #4ce56b;
 }
 
 .content {
@@ -147,5 +136,55 @@ body {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+.squareFBT {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f1f1f1;
+  }
+
+  .square {
+    position: relative;
+    margin: 0 10px;
+    width: 400px;
+    height: 400px;
+  }
+
+  .square span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+  }
+
+  .B span:nth-child(2) {
+    border: none;
+    background: #84cdfa; /* สีพื้นหลังของ square B */
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }

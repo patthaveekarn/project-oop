@@ -7,8 +7,8 @@ public class MoveCommand extends ExecuteNode {
         this.direction = direction;
     }
 
-    @Override
-    public boolean execute(Game bindings) {
-        return bindings.move(direction);
-    }
+//    @Override
+//    public boolean execute(Game bindings) {
+//        return bindings.move(direction);
+//    }
 }

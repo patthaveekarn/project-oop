@@ -1,4 +1,4 @@
 package Backend.Parse;
 
-public class ProcessParse {
+public abstract class ProcessParse {
 }

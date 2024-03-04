@@ -8,7 +8,6 @@ public class ConfigPosition implements Position{
         this.x = x;
         this.y = y;
     }
-
     @Override
     public long getPosX() {
         return x;

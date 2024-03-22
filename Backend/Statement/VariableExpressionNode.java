@@ -1,9 +1,8 @@
 package Backend.Statement;
 
 import Backend.GameProcess.Game;
-import Backend.Statement.Node.NodeException;
 
-public class VariableExpressionNode extends ExpressionNode {
+public class VariableExpressionNode extends Node.ExpressionNode {
     protected long variable;
     protected String identifier;
 

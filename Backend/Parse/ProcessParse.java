@@ -17,7 +17,7 @@ public class ProcessParse implements Parser{
     ).toList();
 
     public ProcessParse(Tokenizer tkz) {
-        if(!tkz.hasNextToken()){
+        if(!tkz.NextToken()){
             throw new SyntaxError.StateRequire(tkz.getNewline());
         }
         this.tkz = tkz;
@@ -27,7 +27,7 @@ public class ProcessParse implements Parser{
     public List<ExecuteNode> parse(){
         List<ExecuteNode> doState = parsePlan();
 
-        if(tkz.hasNextToken()){
+        if(tkz.NextToken()){
             throw new NodeException.LeftoverToken(tkz.peek());
         }
         return doState;
@@ -43,7 +43,7 @@ public class ProcessParse implements Parser{
 
     // Statement → Command | BlockStatement | IfStatement | WhileStatement
     public void parseStatements(List<ExecuteNode> statements){
-        while(!tkz.peek("}") && tkz.hasNextToken()){
+        while(!tkz.peek("}") && tkz.NextToken()){
             statements.add(parseStatement());
         }
     }

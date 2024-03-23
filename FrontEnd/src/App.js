@@ -5,6 +5,7 @@ import HTP from "./Pages/HTP";
 import NG from "./Pages/newGame";
 import QuitButton from "./Pages/QuitButton";
 import "./App.css";
+import InterF from "./Pages/interface";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -19,8 +20,6 @@ const Home = () => {
         <h1>UPBEAT</h1>
         <a href="/menu">
           <FontAwesomeIcon icon={faBars} />
-          
-          
         </a>
       </div>
     </div>
@@ -37,7 +36,7 @@ function App() {
           <Route path="/newGame" element={<NG />} />
           <Route path="/howToPlay" element={<HTP />} />
           <Route path="/quitButton" element={<QuitButton />} />
-
+          <Route path="/interface" element={<InterF />} />
         </Routes>
       </div>
     </Router>

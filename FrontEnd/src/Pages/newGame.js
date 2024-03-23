@@ -12,11 +12,18 @@ function NG() {
   const [selected2, setSelected2] = useState(false);
   const [selected3, setSelected3] = useState(false);
   const [selectedCount, setSelectedCount] = useState(0);
+  const [selectedCount1, setSelectedCount1] = useState(0);
+  const [selectedCount2, setSelectedCount2] = useState(0);
+  const [selectedCount3, setSelectedCount3] = useState(0);
+  const [selectedCount4, setSelectedCount4] = useState(0);
 
   const handleClick = () => {
     if (!selected) {
       setSelected(!selected);
       setSelectedCount(selectedCount + 1);
+      if (selectedCount === 1) {
+        setSelectedCount1(selectedCount);
+      }
     }
   };
 
@@ -24,6 +31,9 @@ function NG() {
     if (!selected1) {
       setSelected1(!selected1);
       setSelectedCount(selectedCount + 1);
+      if (selectedCount === 1) {
+        setSelectedCount2(selectedCount);
+      }
     }
   };
 
@@ -31,6 +41,9 @@ function NG() {
     if (!selected2) {
       setSelected2(!selected2);
       setSelectedCount(selectedCount + 1);
+      if (selectedCount === 1) {
+        setSelectedCount3(selectedCount);
+      }
     }
   };
 
@@ -38,6 +51,9 @@ function NG() {
     if (!selected3) {
       setSelected3(!selected3);
       setSelectedCount(selectedCount + 1);
+      if (selectedCount === 1) {
+        setSelectedCount4(selectedCount);
+      }
     }
   };
 
@@ -51,7 +67,7 @@ function NG() {
           onClick={handleClick}
           disabled={selectedCount === 2}
         >
-          {selected ? (selectedCount === 1 ? "P1" : "P2") : "SELECT"}
+          {selected ? (selectedCount1 === 1 ? "P2" : "P1") : "SELECT"}
         </button>
       </div>
 
@@ -63,7 +79,7 @@ function NG() {
           onClick={handleClick1}
           disabled={selectedCount === 2}
         >
-          {selected1 ? (selectedCount === 1 ? "P1" : "P2") : "SELECT"}
+          {selected1 ? (selectedCount2 === 1 ? "P2" : "P1") : "SELECT"}
         </button>
       </div>
 
@@ -75,7 +91,7 @@ function NG() {
           onClick={handleClick2}
           disabled={selectedCount === 2}
         >
-          {selected2 ? (selectedCount === 1 ? "P1" : "P2") : "SELECT"}
+          {selected2 ? (selectedCount3 === 1 ? "P2" : "P1") : "SELECT"}
         </button>
       </div>
 
@@ -87,7 +103,7 @@ function NG() {
           onClick={handleClick3}
           disabled={selectedCount === 2}
         >
-          {selected3 ? (selectedCount === 1 ? "P1" : "P2") : "SELECT"}
+          {selected3 ? (selectedCount4 === 1 ? "P2" : "P1") : "SELECT"}
         </button>
       </div>
 

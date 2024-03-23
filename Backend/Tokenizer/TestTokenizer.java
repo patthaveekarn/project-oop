@@ -7,13 +7,13 @@ public class TestTokenizer {
     @Test
     public void TestHasNextToken(){
         test = new GrammarTokenizer("move");
-        Assertions.assertTrue(test.hasNextToken());
+        Assertions.assertTrue(test.NextToken());
 
         test = new GrammarTokenizer(null);
-        Assertions.assertFalse(test.hasNextToken());
+        Assertions.assertFalse(test.NextToken());
 
         test = new GrammarTokenizer("");
-        Assertions.assertFalse(test.hasNextToken());
+        Assertions.assertFalse(test.NextToken());
     }
 
     @Test
@@ -86,11 +86,11 @@ public class TestTokenizer {
         Assertions.assertEquals(1, test.getNewline());
         test = new GrammarTokenizer(null);
         Assertions.assertEquals(1, test.getNewline());
-        Assertions.assertFalse(test.hasNextToken());
+        Assertions.assertFalse(test.NextToken());
 
         test = new GrammarTokenizer("");
         Assertions.assertEquals(1, test.getNewline());
-        Assertions.assertFalse(test.hasNextToken());
+        Assertions.assertFalse(test.NextToken());
     }
 
     @Test

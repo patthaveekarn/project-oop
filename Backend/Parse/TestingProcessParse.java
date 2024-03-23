@@ -1,4 +1,4 @@
-package Backend.Parse;;
+package Backend.Parse;
 import Backend.Parse.ProcessParse;
 import Backend.Parse.ReadingFile;
 import Backend.Statement.Node.*;
@@ -9,12 +9,12 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class TestingProcessParse {
+public class TestingProcessParse{
     protected ProcessParse parser;
 
     @Test
     public void testReadFileConstructionPlan() {
-        String filePath = "Back_end\\src\\constructionPlanCode.txt";
+        String filePath = "Backend\\src\\constructionPlanCode.txt";
         try {
             String content = ReadingFile.readFile(filePath);
 
@@ -30,7 +30,7 @@ public class TestingProcessParse {
 
     @Test
     public void testReadFileThenParse() {
-        String filePath = "Back_end\\src\\constructionPlanCode.txt";
+        String filePath = "Backend\\src\\constructionPlanCode.txt";
         try {
             String content = ReadingFile .readFile(filePath);
             GrammarTokenizer tokenizer = new GrammarTokenizer(content);

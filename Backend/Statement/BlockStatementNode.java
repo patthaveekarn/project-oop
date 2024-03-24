@@ -5,10 +5,15 @@ import Backend.Statement.Node.ExecuteNode;
 
 import java.util.List;
 
-public class BlockStatementNode(List<ExecuteNode> statements) {
-        this.statements = statements;
+import java.util.List;
 
-    @Override
+public class BlockStatementNode {
+    private List<ExecuteNode> statements;
+
+    public BlockStatementNode(List<ExecuteNode> statements) {
+        this.statements = statements;
+    }
+
     public boolean execute(Game bindings) {
         for (ExecuteNode statement : statements) {
             if (!statement.execute(bindings)) {
@@ -20,8 +25,7 @@ public class BlockStatementNode(List<ExecuteNode> statements) {
         return true;
     }
 
-    @Override
-    public boolean execute(Game bindings) {
+    public boolean execute1(Game bindings) {
         return statements.stream().allMatch(statement -> statement.execute(bindings));
     }
 }

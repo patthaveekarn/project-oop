@@ -1,7 +1,7 @@
-package Back_End.Project.Config.Statement;
+package Back_End.Project.State;
 
-import Back_End.Project.Config.PlayerandMap.Maps;
-import Back_End.Project.Config.PlayerandMap.Player;
+import Back_End.Project.Player.Maps;
+import Back_End.Project.Player.Playerr;
 //
 /** action done or relocate
  */
@@ -23,7 +23,7 @@ public class ActionCommand {
         this.countturn = countturn;
     }
 
-    public void Done(Player player) {
+    public void Done(Playerr.Player player) {
         turn=player.getturn();
         countturn=player.getCountturn()+1;
         turn= true;
@@ -33,7 +33,7 @@ public class ActionCommand {
 
     }
 
-    public void reset(Player player) {
+    public void reset(Playerr.Player player) {
         turn=player.getturn();
         Xcitycenter=player.getXcitycenter();
         Ycitycenter=player.getYcitycenter();
@@ -45,7 +45,7 @@ public class ActionCommand {
     }
 
 
-    public void Relocate(Player player , Maps map) {
+    public void Relocate(Playerr.Player player , Maps map) {
         Xcitycenter = player.getXcitycenter();
         Ycitycenter =player.getYcitycenter();
         Xplayer=player.getXplayer();

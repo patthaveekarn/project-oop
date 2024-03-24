@@ -1,7 +1,7 @@
-package Back_End.Project.Config.Statement;
+package Back_End.Project.State;
 
-import Back_End.Project.Config.PlayerandMap.Maps;
-import Back_End.Project.Config.PlayerandMap.Player;
+import Back_End.Project.Player.Maps;
+import Back_End.Project.Player.Playerr;
 //
 /** attack player by shoot
  */
@@ -20,7 +20,7 @@ public class AttackCommand{
     public AttackCommand(){
         this.act=new ActionCommand();
     }
-    public void attack(Player player,Maps map,int money,int x,int y){
+    public void attack(Playerr.Player player, Maps map, int money, int x, int y){
         if(player.getInit_budget()>=0){
             budgetplayer=player.getInit_budget();
             long sub= map.getMap(x,y)-money;

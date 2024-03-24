@@ -1,7 +1,7 @@
-package Back_End.Project.Statement;
+package Back_end.Project.Statement;
 
-import Back_End.Project.GameProcess.Game;
-import Back_End.Project.Statement.Node.ExecuteNode;
+import Back_end.Project.GameProcess.Game;
+import Back_end.Project.Statement.Node.ExecuteNode;
 
 import java.util.List;
 

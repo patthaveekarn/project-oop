@@ -1,10 +1,10 @@
-package Back_End.Project.Statement;
+package Back_end.Project.Statement;
 
-import Back_End.Project.GameProcess.Game;
-import Back_End.Project.Statement.Node.ExecuteNode;
+import Back_end.Project.GameProcess.Game;
+import Back_end.Project.Statement.Node.*;
 
 public class AttackCommand extends ExecuteNode {
-    protected ExpressionNode expressionNode;
+    protected Node.ExpressionNode expressionNode;
     protected DirectionNode direction;
 
     public AttackCommand(DirectionNode direction, ExpressionNode expressionNode){

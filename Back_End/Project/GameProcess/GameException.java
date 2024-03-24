@@ -16,13 +16,6 @@ public class GameException extends RuntimeException {
             super(m);
         }
     }
-
-    public static class InvalidConfiguration extends NodeException {
-        public InvalidConfiguration() {
-            super();
-        }
-    }
-
     public static class GameEnded extends NodeException {
         public GameEnded() {
             super("game already ended");

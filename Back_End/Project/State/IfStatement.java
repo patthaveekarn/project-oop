@@ -1,4 +1,4 @@
-package Back_End.Project.Config.Statement;
+package Back_End.Project.State;
 
 public class IfStatement {
     private boolean condition;

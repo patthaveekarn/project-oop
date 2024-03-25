@@ -9,9 +9,8 @@ public class TimeCount {
         int time = in.nextInt();
         for (int i = time; i >= 0; i--) {
             Thread.sleep(1000);
-            System.out.print(i + " ");
+            System.out.print(i + "\n");
         }
-        Thread.sleep(1000);
         System.out.println("Success");
     }
 }

@@ -17,9 +17,9 @@ public class TestingProcessParse {
 
     @Test
     public void testReadFileConstructionPlan() {
-        String filePath = "Back_end\\src\\constructionPlanCode.txt";
+        String filePath = "Back_End\\src\\constructionPlan.txt";
         try {
-            String content = ReadingFile .readFile(filePath);
+            String content = ReadingFile.readFile(filePath);
 
             // Perform any additional validation, e.g., checking the number of nodes
             Assertions.assertNotNull(content, "Result should not be null");
@@ -33,9 +33,9 @@ public class TestingProcessParse {
 
     @Test
     public void testReadFileThenParse() {
-        String filePath = "Back_end\\src\\constructionPlanCode.txt";
+        String filePath = "Back_End\\src\\constructionPlan.txt";
         try {
-            String content = ReadingFile .readFile(filePath);
+            String content = ReadingFile.readFile(filePath);
             GrammarTokenizer tokenizer = new GrammarTokenizer(content);
             ProcessParse parser = new ProcessParse(tokenizer);
             List<ExecuteNode> result = parser.parse();
